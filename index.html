@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+function autoType(elementClass, typingSpeed){
+  var thhis = $(elementClass);
+
+  thhis = thhis.find(".text-js");
+  var text = thhis.text().trim().split('');
+  var amntOfChars = text.length;
+  var newString = "";
+  thhis.text("|");
+  setTimeout(function(){
+    thhis.css("opacity",1);
+    thhis.prev().removeAttr("style");
+    thhis.text("");
+    for(var i = 0; i < amntOfChars; i++){
+      (function(i,char){
+        setTimeout(function() {        
+          newString += char;
+          thhis.text(newString);
+        },i*typingSpeed);
+      })(i+1,text[i]);
+    }
+  },500);
+}
+
+$(document).ready(function(){
+  // Now to start autoTyping just call the autoType function with the 
+  // class of outer div
+  // The second paramter is the speed between each letter is typed.   
+  autoType(".type-js",100);
+});
+
+/*for fixed header
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}*/
+</script>
+
+</head>
+<body>
+
+
+<div class="header" id="myHeader">
+  <a href="#default" class="logo">Portfolio</a>
+  <div class="header-right">
+    <a class="active" href="#home">Home</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#content">Content</a>
+  </div>
+</div>
+
+
+<div class="bgimg-1">
+  <div class="caption">
+    <div class="type-js headline">
+     <h1 class="text-js" style="text-align: center; color: red;opacity: 0.6;text-align: center;text-align: justify;padding: 50px 50px;background-color: grey;">I am a professional Web  Developer.<br>  Worked on many projects.<br>Better Understanding of Android Studio also.<br>Hi, There I am Mukesh SIhag</h1>
+  </div>  
+  </div>
+</div>
+
+<div style="color: #777;background-color:red;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;">cool</h3>
+  <p></p>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+  </div>
+</div>
+
+<div class="bgimg">
+  <div class="caption">
+    <span class="border">COOL!</span>
+  </div>
+</div>
+
+</body>
+</html>
