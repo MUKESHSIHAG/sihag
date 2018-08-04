@@ -7,15 +7,15 @@ body {
 
 .header {
   overflow: hidden;
-  background-color: red;
-  padding: 20px 20px 20px 10px;
+  background-color: black;
+  padding: 20px 20px 20px 20px;
 }
 
 .header a {
   float: left;
   color: white;
   text-align: center;
-  padding: 12px;
+  padding: 15px;
   text-decoration: none;
   font-size: 18px; 
   line-height: 25px;
@@ -23,13 +23,13 @@ body {
 }
 
 .header a.logo {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
 }
 
 .header a:hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 
@@ -94,11 +94,13 @@ body, html {
 }
 
 .caption span.border {
-  background-color: #111;
-  color: #fff;
-  padding: 18px;
-  font-size: 25px;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
   letter-spacing: 10px;
+  opacity: 1;
+  border-radius: 15px;
 }
 
 h3 {
@@ -106,4 +108,27 @@ h3 {
   text-transform: uppercase;
   font: 20px "Lato", sans-serif;
   color: #111;
+}
+
+.footer {
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 18px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.footer a:hover {
+  background: white;
+  color: black;
 }
